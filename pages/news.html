@@ -93,13 +93,13 @@
   <section class="section">
     <div class="container">
 
-      <div class="preview" style="min-height: 380px; margin-bottom: 4rem;">
-        <img src="../img/news-main.jpg" alt="Главное событие" class="preview__image fade-in-left">
-        <div class="preview__content fade-in-right">
+      <div class="preview" style="min-height: 220px; margin-bottom: 3rem;">
+        <img src="../img/news-main.jpg" alt="Главное событие" class="preview__image fade-in-left" style="height: 330px; object-fit: cover;">
+        <div class="preview__content fade-in-right" style="padding: 2rem 2.5rem;">
           <span class="news-card__date">1 июня 2026</span>
-          <h2 class="preview__title">Летнее обновление меню</h2>
-          <p class="preview__text">Новое летнее меню от шеф-повара. Свежие сезонные ингредиенты и яркие вкусы.</p>
-          <a href="#" class="btn btn--outline" style="align-self: flex-start;">Подробнее</a>
+          <h2 class="preview__title" style="font-size: 2.8rem; margin-bottom: 1rem;">Летнее обновление меню</h2>
+          <p class="preview__text" style="font-size: 1.3rem;">Новое летнее меню от шеф-повара. Свежие сезонные ингредиенты и яркие вкусы.</p>
+          <button class="btn btn--outline" style="align-self: flex-start;" onclick="openModal('summer-menu')">Подробнее</button>
         </div>
       </div>
 
@@ -223,6 +223,54 @@
       </div>
     </div>
   </footer>
+
+  <!-- Модальное окно: Летнее меню -->
+  <div class="modal" id="modal-summer-menu">
+    <div class="modal__overlay" onclick="closeModal('summer-menu')"></div>
+    <div class="modal__dialog">
+      <button class="modal__close" onclick="closeModal('summer-menu')" aria-label="Закрыть">&times;</button>
+      <div class="modal__header">
+        <h2>Летнее обновление меню</h2>
+        <p>Шеф-повар представил новую летнюю карту — лёгкие вкусы, сезонные ингредиенты и яркие сочетания.</p>
+      </div>
+      <div class="modal__body">
+        <div class="modal__items">
+          <div class="modal__item">
+            <img src="../img/dish-wok-4.jpg" alt="Пад Тай с креветками" class="modal__item-img">
+            <div>
+              <div class="modal__item-name">Пад Тай с креветками</div>
+              <div class="modal__item-desc">Рисовая лапша, тигровые креветки, тамаринд, арахис, лайм</div>
+              <div class="modal__item-price">920 ₽</div>
+            </div>
+          </div>
+          <div class="modal__item">
+            <img src="../img/modal-dish1.jpg" alt="Летний ролл с авокадо" class="modal__item-img">
+            <div>
+              <div class="modal__item-name">Летний ролл с авокадо</div>
+              <div class="modal__item-desc">Нори, рис, авокадо, огурец, кунжут, соус спайси — 8 шт.</div>
+              <div class="modal__item-price">750 ₽</div>
+            </div>
+          </div>
+          <div class="modal__item">
+            <img src="../img/modal-dish2.jpg" alt="Хрустящие пельмени" class="modal__item-img">
+            <div>
+              <div class="modal__item-name">Хрустящие пельмени дим Сам</div>
+              <div class="modal__item-desc">Тонкое тесто, свинина, креветки, имбирь, соус чили</div>
+              <div class="modal__item-price">680 ₽</div>
+            </div>
+          </div>
+          <div class="modal__item">
+            <img src="../img/modal-dish3.jpg" alt="Лапша с морепродуктами" class="modal__item-img">
+            <div>
+              <div class="modal__item-name">Лапша с морепродуктами</div>
+              <div class="modal__item-desc">Рисовая лапша, креветки, кальмар, мидии, соус терияки</div>
+              <div class="modal__item-price">890 ₽</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="../js/main.js"></script>
 </body>

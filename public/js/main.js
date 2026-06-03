@@ -304,5 +304,28 @@ function showNotification(message, type = 'info') {
 }
 
 /* ============================
-   Плавная прокрутка
+   Модальные окна
    ============================ */
+
+function openModal(id) {
+  const modal = document.getElementById('modal-' + id);
+  if (!modal) return;
+  modal.classList.add('modal--active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+  const modal = document.getElementById('modal-' + id);
+  if (!modal) return;
+  modal.classList.remove('modal--active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal--active').forEach(modal => {
+      modal.classList.remove('modal--active');
+    });
+    document.body.style.overflow = '';
+  }
+});
