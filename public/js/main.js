@@ -29,16 +29,22 @@ function initPreloader() {
     preloader.classList.add('preloader--fast');
   }
 
-  window.addEventListener('load', () => {
+  function hidePreloader() {
     setTimeout(() => {
       preloader.classList.add('preloader--hidden');
     }, showDelay);
-  });
+  }
 
-  // Fallback: скрыть через 3 сек
+  if (document.readyState === 'complete') {
+    hidePreloader();
+  } else {
+    window.addEventListener('load', hidePreloader);
+  }
+
+  // Fallback: скрыть через 5 сек (мобильные устройства могут загружаться дольше)
   setTimeout(() => {
     preloader.classList.add('preloader--hidden');
-  }, 3000);
+  }, 5000);
 
   // Перехват переходов по внутренним ссылкам
   document.querySelectorAll('a[href]').forEach(link => {
@@ -66,9 +72,7 @@ function initHeader() {
   const header = document.querySelector('.header');
   if (!header) return;
 
-  // fullPage.js handles header state via afterLoad callback
-  // Fallback for non-fullpage pages
-  if (typeof fullpage_api === 'undefined') {
+  if (typeof fullpage_api === 'undefined' && window.innerWidth > 768) {
     const onScroll = () => {
       if (window.scrollY > 50) {
         header.classList.add('header--scrolled');

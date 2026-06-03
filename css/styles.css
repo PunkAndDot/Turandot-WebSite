@@ -626,17 +626,17 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
   display: flex;
   justify-content: center;
   gap: 0;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.06);
 }
 
 .menu-tab {
   font-family: var(--font-accent);
-  font-size: 1.9rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 2rem 3rem;
+  padding: 1.2rem 2rem;
   background: transparent;
   border: none;
   border-bottom: 4px solid transparent;
@@ -683,7 +683,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 .menu-item {
   display: flex;
   gap: 2rem;
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
   border-bottom: 2px solid rgba(255, 255, 255, 0.04);
   transition: all var(--transition-normal);
 }
@@ -693,8 +693,8 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 }
 
 .menu-item__image {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -717,14 +717,14 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 }
 
 .menu-item__name {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--cream);
 }
 
 .menu-item__price {
   font-family: var(--font-accent);
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--gold);
   white-space: nowrap;
@@ -732,13 +732,13 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .menu-item__desc {
   color: var(--gray);
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   font-style: italic;
 }
 
 .section--menu {
-  padding: 2rem 0 12rem;
+  padding: 2rem 0 6rem;
   position: relative;
 }
 
@@ -1522,6 +1522,16 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 }
 
 @media (max-width: 768px) {
+  .fp-section {
+    height: auto !important;
+    min-height: 100vh;
+  }
+
+  .scroll-hint,
+  .scroll-up-btn {
+    display: none !important;
+  }
+
   .hero-layout {
     padding: 0 5%;
     justify-content: flex-start;
@@ -1638,8 +1648,8 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
   }
 
   .menu-tab {
-    padding: 1.6rem 2rem;
-    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 2px;
     white-space: nowrap;
     flex-shrink: 0;
@@ -1651,7 +1661,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
   }
 
   .section--menu {
-    padding: 6rem 0 7rem;
+    padding: 4rem 0 4rem;
   }
 }
 
@@ -1704,7 +1714,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
   }
 
   .section--menu {
-    padding: 4rem 0 5rem;
+    padding: 3rem 0 3rem;
   }
 }
 
@@ -1775,6 +1785,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
   justify-content: center;
   gap: 1.5rem;
   transition: opacity 0.6s ease;
+  will-change: opacity;
 }
 
 .preloader--fast {
@@ -1790,6 +1801,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
   width: 140px;
   height: 140px;
   animation: ornamentSpin 12s linear infinite;
+  will-change: transform;
   opacity: 0.8;
 }
 
