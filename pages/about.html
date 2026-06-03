@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас — Турандот</title>
+  <meta name="description" content="История и философия ресторана Турандот.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant:wght@400;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="page-gradient">
+
+  <!-- Прелоадер -->
+  <div class="preloader">
+    <div class="preloader__ornament">
+      <svg viewBox="0 0 200 200" class="preloader__svg">
+        <defs>
+          <linearGradient id="preloaderGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#C5A55A;stop-opacity:0.6" />
+            <stop offset="50%" style="stop-color:#D4BA7A;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#A8893E;stop-opacity:0.6" />
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="url(#preloaderGoldGrad)" stroke-width="1">
+          <circle cx="100" cy="100" r="30" opacity="0.7"/>
+          <circle cx="100" cy="100" r="45" opacity="0.5"/>
+          <circle cx="100" cy="100" r="60" opacity="0.3"/>
+          <path d="M100,40 Q120,70 100,100 Q80,70 100,40" opacity="0.5"/>
+          <path d="M160,100 Q130,120 100,100 Q130,80 160,100" opacity="0.5"/>
+          <path d="M100,160 Q80,130 100,100 Q120,130 100,160" opacity="0.5"/>
+          <path d="M40,100 Q70,80 100,100 Q70,120 40,100" opacity="0.5"/>
+          <path d="M143,57 Q125,85 100,100 Q115,75 143,57" opacity="0.4"/>
+          <path d="M143,143 Q115,125 100,100 Q125,115 143,143" opacity="0.4"/>
+          <path d="M57,143 Q75,115 100,100 Q85,125 57,143" opacity="0.4"/>
+          <path d="M57,57 Q85,75 100,100 Q75,85 57,57" opacity="0.4"/>
+          <path d="M100,10 Q130,50 100,100" opacity="0.3"/>
+          <path d="M190,100 Q150,130 100,100" opacity="0.3"/>
+          <path d="M100,190 Q70,150 100,100" opacity="0.3"/>
+          <path d="M10,100 Q50,70 100,100" opacity="0.3"/>
+          <path d="M20,20 Q60,60 100,100" opacity="0.2"/>
+          <path d="M180,20 Q140,60 100,100" opacity="0.2"/>
+          <path d="M180,180 Q140,140 100,100" opacity="0.2"/>
+          <path d="M20,180 Q60,140 100,100" opacity="0.2"/>
+          <circle cx="100" cy="10" r="3" fill="url(#preloaderGoldGrad)" opacity="0.5"/>
+          <circle cx="190" cy="100" r="3" fill="url(#preloaderGoldGrad)" opacity="0.5"/>
+          <circle cx="100" cy="190" r="3" fill="url(#preloaderGoldGrad)" opacity="0.5"/>
+          <circle cx="10" cy="100" r="3" fill="url(#preloaderGoldGrad)" opacity="0.5"/>
+          <circle cx="163" cy="37" r="2" fill="url(#preloaderGoldGrad)" opacity="0.4"/>
+          <circle cx="163" cy="163" r="2" fill="url(#preloaderGoldGrad)" opacity="0.4"/>
+          <circle cx="37" cy="163" r="2" fill="url(#preloaderGoldGrad)" opacity="0.4"/>
+          <circle cx="37" cy="37" r="2" fill="url(#preloaderGoldGrad)" opacity="0.4"/>
+        </g>
+      </svg>
+    </div>
+    <div class="preloader__text">Турандот</div>
+  </div>
+
+  <header class="header header--scrolled">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <span class="logo__name">Турандот</span>
+        <span class="logo__sub">Ресторан</span>
+      </a>
+      <nav>
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link">Главная</a></li>
+          <li><a href="menu.html" class="nav__link">Меню</a></li>
+          <li><a href="about.html" class="nav__link nav__link--active">О нас</a></li>
+          <li><a href="news.html" class="nav__link">Новости</a></li>
+          <li><a href="reservation.html" class="nav__link">Контакты</a></li>
+          <li><a href="reservation.html" class="btn-reserve">Забронировать</a></li>
+        </ul>
+      </nav>
+      <button class="burger" aria-label="Меню">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="about-hero">
+    <div class="about-hero__bg" style="background-image: url('../img/about-header.jpg');"></div>
+    <div class="about-hero__overlay"></div>
+    <div class="about-hero__content">
+      <h1 class="page-header__title">О нас</h1>
+      <p class="page-header__subtitle">История, вдохновляющая традиции</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-story">
+        <img src="../img/about-story.jpg" alt="История ресторана" class="about-story__image fade-in-left">
+        <div class="about-story__content fade-in-right">
+          <span class="preview__label">Наша история</span>
+          <h3>От мечты — к ресторану</h3>
+          <p>Пространство, где восточная кухня встречается с европейской изысканностью. Роскошные интерьеры, роспись на потолках, хрустальные люстры.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <h2 class="section-title fade-in">Философия</h2>
+      <p class="section-subtitle fade-in">Три основы каждого нашего вечера</p>
+
+      <div class="about-values">
+        <div class="about-value fade-in">
+          <div class="about-value__icon">乾</div>
+          <h3 class="about-value__title">Традиции</h3>
+          <p class="about-value__text">Рецепты, передаваемые из поколения в поколение на протяжении столетий</p>
+        </div>
+        <div class="about-value fade-in">
+          <div class="about-value__icon">創</div>
+          <h3 class="about-value__title">Инновации</h3>
+          <p class="about-value__text">Классические техники в сочетании с современными методами</p>
+        </div>
+        <div class="about-value fade-in">
+          <div class="about-value__icon">心</div>
+          <h3 class="about-value__title">Забота</h3>
+          <p class="about-value__text">Каждая деталь продумана для незабываемого опыта</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Наши залы</h2>
+      <p class="section-subtitle fade-in">Три уникальных пространства</p>
+
+      <div class="about-story" style="gap: 2.5rem;">
+        <div class="about-story__content fade-in-left">
+          <span class="preview__label">Зал «Турандот»</span>
+          <h3>Главный зал</h3>
+          <p>Расписной потолок, хрустальные люстры. До 120 гостей.</p>
+        </div>
+        <img src="../img/hall-1.jpg" alt="Главный зал" class="about-story__image fade-in-right">
+      </div>
+
+      <div class="about-story" style="gap: 2.5rem; margin-top: 3rem;">
+        <img src="../img/hall-2.jpg" alt="Банкетный зал" class="about-story__image fade-in-left">
+        <div class="about-story__content fade-in-right">
+          <span class="preview__label">Банкетный зал</span>
+          <h3>Для особых моментов</h3>
+          <p>Торжества, свадьбы, корпоративы. До 80 гостей.</p>
+        </div>
+      </div>
+
+      <div class="about-story" style="gap: 2.5rem; margin-top: 3rem;">
+        <div class="about-story__content fade-in-left">
+          <span class="preview__label">ВИП-зона</span>
+          <h3>Приватность</h3>
+          <p>Отдельный вход, персональное обслуживание. До 20 гостей.</p>
+        </div>
+        <img src="../img/hall-3.jpg" alt="ВИП-зона" class="about-story__image fade-in-right">
+      </div>
+    </div>
+  </section>
+
+  <section class="preview" style="min-height: 400px;">
+    <img src="../img/chef.jpg" alt="Шеф-повар" class="preview__image fade-in-left">
+    <div class="preview__content fade-in-right">
+      <span class="preview__label">Шеф-повар</span>
+      <h2 class="preview__title">Мастер своего дела</h2>
+      <p class="preview__text">Лауреат кулинарных конкурсов. Стажировка в лучших ресторанах Пекина, Шанхая и Гонконга.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="logo" style="align-items: flex-start;">
+            <span class="logo__name">Турандот</span>
+            <span class="logo__sub">Ресторан</span>
+          </div>
+          <p style="margin-top: 0.75rem;">Восточная кухня в сердце Москвы</p>
+        </div>
+        <div>
+          <h4 class="footer__heading">Навигация</h4>
+          <ul class="footer__links">
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="reservation.html">Бронирование</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Контакты</h4>
+          <div class="footer__contact">
+            <p>г. Москва, ул. Тверская, д. 26</p>
+            <p>+7 (495) 123-45-67</p>
+            <p>info@turandot.ru</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Часы работы</h4>
+          <div class="footer__contact">
+            <p>Пн-Чт: 12:00 — 00:00</p>
+            <p>Пт-Сб: 12:00 — 02:00</p>
+            <p>Вс: 12:00 — 23:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Ресторан «Турандот». Все права защищены.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Telegram">TG</a>
+          <a href="#" aria-label="VK">VK</a>
+        </div>
+      </div>
+      <div class="footer__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.4728!2d37.6044!3d55.7628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzQ2LjAiTiAzN8KwMzYnMTUuOCJF!5e0!3m2!1sru!2sru!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          title="Местоположение ресторана">
+        </iframe>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
