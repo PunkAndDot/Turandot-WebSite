@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMenuTabs();
   initLightbox();
   initReservationForm();
+  initMobileScrollSnap();
 });
 
 /* ============================
@@ -329,3 +330,34 @@ document.addEventListener('keydown', (e) => {
     document.body.style.overflow = '';
   }
 });
+
+/* ============================
+   Scroll-Snap анимации (мобилка)
+   ============================ */
+
+function initMobileScrollSnap() {
+  if (window.innerWidth > 768) return;
+
+  var fullpage = document.getElementById('fullpage');
+  var header = document.querySelector('.header');
+  var sections = fullpage ? fullpage.querySelectorAll('.fp-section') : [];
+  if (!fullpage || !sections.length) return;
+
+  fullpage.addEventListener('scroll', function() {
+    header.classList.toggle('header--scrolled', fullpage.scrollTop > 50);
+  }, { passive: true });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, {
+    root: fullpage,
+    threshold: 0.5
+  });
+
+  sections.forEach(function(s) { observer.observe(s); });
+  sections[0].classList.add('in-view');
+}
