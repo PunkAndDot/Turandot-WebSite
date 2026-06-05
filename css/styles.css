@@ -1679,6 +1679,8 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
   .preview__content {
     padding: 1.25rem !important;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .nav__list {
