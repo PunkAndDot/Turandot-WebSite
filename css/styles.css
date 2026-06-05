@@ -1499,6 +1499,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 @media (max-width: 1024px) {
   .preview {
     grid-template-columns: 1fr;
+    overflow: hidden;
   }
 
   .menu-items {
