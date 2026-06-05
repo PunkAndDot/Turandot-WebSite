@@ -30,6 +30,8 @@
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.6s ease;
+
+  --vh: 1vh;
 }
 
 *, *::before, *::after {
@@ -150,6 +152,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .header--scrolled {
   background-color: rgba(11, 17, 32, 0.97);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 rgba(197, 165, 90, 0.15);
 }
@@ -267,7 +270,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .hero {
   position: relative;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   min-height: 600px;
   display: flex;
   align-items: center;
@@ -279,7 +282,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .hero__bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-size: cover;
   background-position: center;
   opacity: 0.5;
@@ -292,7 +298,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .hero__overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(
     to bottom,
     rgba(11, 17, 32, 0.3) 0%,
@@ -369,6 +378,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 .btn--primary:hover {
   background: var(--gold-light);
   box-shadow: 0 4px 24px rgba(197, 165, 90, 0.35);
+  -webkit-transform: translateY(-1px);
   transform: translateY(-1px);
 }
 
@@ -598,6 +608,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 }
 
 .form-select {
+  -webkit-appearance: none;
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23C5A55A' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -764,6 +775,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 }
 
 .news-card:hover {
+  -webkit-transform: translateY(-4px);
   transform: translateY(-4px);
   border-color: rgba(197, 165, 90, 0.2);
 }
@@ -928,7 +940,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .about-hero__bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-size: cover;
   background-position: center;
   transition: transform 8s ease;
@@ -940,7 +955,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .about-hero__overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(
     to bottom,
     rgba(11, 17, 32, 0.4) 0%,
@@ -1046,7 +1064,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .page-header__bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-size: cover;
   background-position: center;
   opacity: 0.35;
@@ -1059,7 +1080,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .page-header__overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(
     to bottom,
     rgba(11, 17, 32, 0.3) 0%,
@@ -1154,7 +1178,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .fp-section {
   position: relative;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   min-height: 600px;
   display: flex;
   align-items: center;
@@ -1166,7 +1190,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .fp-section .slide-bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-size: cover;
   background-position: center;
   transition: transform 8s ease;
@@ -1178,7 +1205,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .slide-overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(
     to bottom,
     rgba(11, 17, 32, 0.3) 0%,
@@ -1231,7 +1261,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 /* Новый layout для первого блока */
 .hero-layout {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -1303,6 +1336,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
   background: rgba(197, 165, 90, 0.25);
   color: var(--cream);
   border-color: var(--gold);
+  -webkit-transform: translateY(-4px) scale(1.02);
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 0 20px rgba(197, 165, 90, 0.3), 0 0 40px rgba(197, 165, 90, 0.15), 0 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -1448,6 +1482,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .scroll-up-btn:hover {
   background: var(--gold-light);
+  -webkit-transform: translateY(-3px);
   transform: translateY(-3px);
 }
 
@@ -1551,14 +1586,14 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
   }
 
   .fp-section {
-    height: 100vh !important;
+    height: calc(var(--vh, 1vh) * 100) !important;
     scroll-snap-align: start;
   }
 
   #fullpage {
     overflow-y: auto;
     scroll-snap-type: y mandatory;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
   }
 
   /* ---- Анимации контента ---- */
@@ -1868,7 +1903,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .lightbox {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 2000;
   background: rgba(0, 0, 0, 0.95);
   display: flex;
@@ -1920,7 +1958,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .preloader {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 3000;
   background-color: var(--navy);
   display: flex;
@@ -1974,7 +2015,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .modal {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 2000;
   display: flex;
   align-items: center;
@@ -1991,8 +2035,12 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
 
 .modal__overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: rgba(6, 10, 16, 0.85);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
 
