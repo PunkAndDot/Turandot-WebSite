@@ -1031,6 +1031,12 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
   order: -1;
 }
 
+@media (max-width: 1024px) {
+  .about-story--reverse .about-story__image {
+    order: 0;
+  }
+}
+
 .about-story__image {
   width: 100%;
   height: 420px;
