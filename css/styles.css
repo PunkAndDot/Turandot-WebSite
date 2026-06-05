@@ -1027,12 +1027,12 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
   align-items: center;
 }
 
-.about-story--reverse .about-story__image {
+.about-story--reverse .about-story__content {
   order: -1;
 }
 
 @media (max-width: 1024px) {
-  .about-story--reverse .about-story__image {
+  .about-story--reverse .about-story__content {
     order: 0;
   }
 }
