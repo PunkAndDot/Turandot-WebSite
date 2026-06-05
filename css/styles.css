@@ -1669,6 +1669,18 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
     font-size: 0.85rem;
   }
 
+  .preview__title {
+    font-size: 1.6rem !important;
+  }
+
+  .preview__text {
+    font-size: 1rem !important;
+  }
+
+  .preview__content {
+    padding: 1.25rem !important;
+  }
+
   .nav__list {
     position: fixed;
     top: 0;
